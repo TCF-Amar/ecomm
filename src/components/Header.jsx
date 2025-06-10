@@ -8,7 +8,7 @@ import useSidebar from '../store/useSidebar'
 import useSearch from '../store/useSearch';
 import useCart from '../store/useCart';
 import { useAuth } from '../store/useAuth';
-import ProfileMenu from './profileMenu';
+import ProfileMenu from './ProfileMenu';
 
 function Header() {
     const navigate = useNavigate();

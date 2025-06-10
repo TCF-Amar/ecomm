@@ -1,17 +1,16 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../store/useAuth'
 import { HiOutlineBadgeCheck } from "react-icons/hi";
 import { HiCreditCard, HiPower, HiUser } from 'react-icons/hi2';
 
-function ProfileMenu({ user, setShowProfileMenu }) {
+function ProfileMenu({ setShowProfileMenu }) {
     const { logout } = useAuth();
     return (
         <div className='absolute top-12 right-0  bg-white text-gray-700 z-50   border border-gray-200 rounded-md shadow-lg'>
 
             <button className='w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md' onClick={() => setShowProfileMenu(false)}>
                 <Link to={'/profile'} className='flex items-center gap-2 text-gray-700 hover:text-gray-900'>
-                    <HiUser/>
+                    <HiUser />
                     <span>Profile</span>
                 </Link>
             </button>
@@ -24,7 +23,7 @@ function ProfileMenu({ user, setShowProfileMenu }) {
             <button className='w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md' onClick={() => setShowProfileMenu(false)}>
                 <Link to={'/wishlist'} className='flex items-center gap-2 text-gray-700 hover:text-gray-900'>
                     <HiOutlineBadgeCheck />
-                    <span>Wishlist</span>    
+                    <span>Wishlist</span>
                 </Link>
             </button>
 
